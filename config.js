@@ -181,7 +181,8 @@ const PORTFOLIO_CONFIG = {
     },
     {
       role:     "AWS Developer",
-      company:  "Molina Technologies LLC (Client: US Foods, Inc.)",
+      company:  "Molina Technologies LLC",
+      client:   "US Foods, Inc.",
       location: "Rosemont, Illinois",
       dates:    "Sep 2017 – Dec 2018",
       bullets: [

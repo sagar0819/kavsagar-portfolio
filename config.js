@@ -11,7 +11,7 @@ const PORTFOLIO_CONFIG = {
   name:        "Ananda Vidya Sagar Katakam",
   title:       "Principal Architect - DataOps",
   profileImage: "images/profile.jpg",   // path relative to index.html
-  subtitle:    "Designing and implementing scalable infrastructure, automated data pipelines, secure cloud (AWS & Azure), and AI platforms (LangSmith, Databricks AI Gateway, AWS Bedrock). Currently leading DataOps & AIOps at Medtronic.",
+  subtitle:    "Designing and implementing scalable infrastructure, automated data pipelines, secure cloud (AWS & Azure), and AI platforms (LangSmith, AI Gateway, AWS Bedrock). Currently leading DataOps & AIOps at Medtronic.",
 
   /* ── Contact (display values — keep masked for privacy) ── */
   contact: {
@@ -108,7 +108,7 @@ const PORTFOLIO_CONFIG = {
       role:     "Principal Architect DataOps",
       company:  "Medtronic, Inc.",
       location: "Duluth, Georgia",
-      dates:    "Jan 29, 2024 – Present",
+      dates:    "Jan 2024 – Present",
       bullets: [
         "Designed and developed Terraform modules for infrastructure provisioning, ensuring modularity, reusability, and scalability across projects & environments.",
         "Implemented CI pipelines for Terraform modules to automate testing, validation and deployment processes, ensuring reliability and consistency in infrastructure provisioning using tools such as GitHub Actions, Terraform Tests, tflint, KICS.",
@@ -127,7 +127,7 @@ const PORTFOLIO_CONFIG = {
       role:     "Lead Cloud Engineer",
       company:  "US Foods, Inc.",
       location: "Rosemont, Illinois",
-      dates:    "Feb 22, 2023 – Jan 26, 2024",
+      dates:    "Feb 2023 – Jan 2024",
       bullets: [
         "Defined and driven the technical roadmaps to streamline cloud infrastructure operations, cost efficiency model, security, and identified areas of efficiency.",
         "Defined and driven technical maturity roadmaps to streamline cloud infrastructure operations, security, and efficiency.",
@@ -145,7 +145,7 @@ const PORTFOLIO_CONFIG = {
       role:     "Lead Application Developer",
       company:  "US Foods, Inc.",
       location: "Rosemont, Illinois",
-      dates:    "Dec 19, 2021 – Feb 21, 2023",
+      dates:    "Dec 2021 – Feb 2023",
       bullets: [
         "Lead the team of 6-8 developers, done the peer code reviews, and monitored the tasks progression of team using Jira.",
         "Reviewed the project objectives and determine best technology to apply.",
@@ -165,7 +165,7 @@ const PORTFOLIO_CONFIG = {
       role:     "Sr. Application Developer",
       company:  "US Foods, Inc.",
       location: "Tempe, Arizona",
-      dates:    "Dec 26, 2018 – Dec 18, 2021",
+      dates:    "Dec 2018 – Dec 2021",
       bullets: [
         "Developed and Implemented automation & lifecycle management of various services in AWS using bamboo pipelines and CloudFormation templates.",
         "Designed and created the physical/logical diagrams in Lucidchart for various business applications hosted in Public Cloud.",
@@ -183,7 +183,7 @@ const PORTFOLIO_CONFIG = {
       role:     "AWS Developer",
       company:  "Molina Technologies LLC (Client: US Foods, Inc.)",
       location: "Rosemont, Illinois",
-      dates:    "Sep 25, 2017 – Dec 25, 2018",
+      dates:    "Sep 2017 – Dec 2018",
       bullets: [
         "Designed and implemented centralized monitoring in enterprise cloud integrating with observability tools such as Splunk.",
         "Developed chef cookbooks for configuration management and automated provisioning using CICD tools such as Jenkins and Terraform.",
@@ -201,19 +201,13 @@ const PORTFOLIO_CONFIG = {
       degree:      "Executive MBA (Information Technology)",
       institution: "Ottawa University",
       location:    "Surprise, AZ",
-      dates:       "06/26/2020 to 07/31/2022",
+      dates:       "06/2020 to 07/2022",
     },
     {
       degree:      "Masters in Computer Science",
       institution: "Central Michigan University",
       location:    "Mt. Pleasant, MI",
-      dates:       "08/31/2015 to 05/06/2017",
-    },
-    {
-      degree:      "Bachelor of Technology (Computer Science & Engineering)",
-      institution: "Brindavan Institute of Technology & Science, JNTUA",
-      location:    "AP, India",
-      dates:       "10/04/2010 to 08/13/2014",
+      dates:       "08/2015 to 05/2017",
     },
   ],
 

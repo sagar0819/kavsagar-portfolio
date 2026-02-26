@@ -160,9 +160,16 @@ footer { border-top: 1px solid #1f2937; color: var(--muted); padding: 2.5rem 0; 
   text-decoration: none;
 }
 
+.card a, .cert-list a {
+  /* gradient text like the hero headline with accent fallback */
+  background: linear-gradient(to right, #ffffff, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent); /* fallback */
+}
+
 .card a:hover, .cert-list a:hover {
   text-decoration: underline;
-  color: #9beefd;
 }
 #toast.show { opacity: 1; transform: translateX(-50%) translateY(-6px); }
 

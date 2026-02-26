@@ -3,288 +3,206 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal summary blog and profile" />
-    <title>Ananda Vidya Sagar Katakam | Principal Architect - DataOps</title>
+    <meta id="meta-desc" name="description" content="Personal portfolio" />
+    <title id="page-title">Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body>
+    <!-- ██ Edit config.js to personalise — do not edit content here ██ -->
+
+    <!-- ── Hero ──────────────────────────────────────────── -->
     <header class="hero">
       <div class="container hero-grid fadeIn">
         <div class="profile-card">
-          <!-- Add your profile image as 'profile.jpg' in the repo root or update the path -->
-          <img src="images/profile.jpg" alt="Profile photo" class="profile-img" />
-          <div class="profile-links">
-            <a href="https://github.com/sagar0819" target="_blank" class="social-btn">
-              <i class="fab fa-github"></i>
-              <span class="sr-only">GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/kavs-66a6a037/" target="_blank" class="social-btn">
-              <i class="fab fa-linkedin"></i>
-              <span class="sr-only">LinkedIn</span>
-            </a>
-          </div>
+          <img id="profile-img" src="" alt="Profile photo" class="profile-img" />
+          <div id="social-links" class="profile-links"></div>
         </div>
-
         <div class="hero-content">
-          <p class="tag">Principal Architect - DataOps</p>
-          <h1>Ananda Vidya Sagar Katakam</h1>
-          <div class="value-chips">
-            <a class="value-chip" href="#business-impact">AWS & Azure Cloud</a>
-            <a class="value-chip" href="#business-impact">Data & AI Platform</a>
-            <a class="value-chip" href="#business-impact">Security & Observability</a>
-            <a class="value-chip" href="#business-impact">Platform Engineering</a>
-            <a class="value-chip" href="#business-impact">Cloud FinOps</a>
-          </div>
-          <p class="subtitle">Designing and implementing scalable infrastructure, automated data pipelines, secure cloud(AWS & Azure), and AI platforms (LangSmith, Databricks AI Gateway, AWS Bedrock). Currently leading DataOps & AIOps at Medtronic.</p>
-
-          <div class="header-contact">
-            <span class="contact-chip">
-              <i class="fas fa-envelope"></i>
-              <span id="emailText">k.ana*****@gmail.com</span>
-            </span>
-
-            <span class="contact-chip">
-              <i class="fas fa-phone"></i>
-              <span id="phoneText">+1 (9**) *** - **99</span>
-            </span>
-
-            <span class="chip"><i class="fas fa-map-marker-alt"></i> Duluth, GA</span>
-          </div>
-          <!-- Resume button moved next to name for a cleaner header -->
-          
+          <p id="hero-title" class="tag"></p>
+          <h1 id="hero-name"></h1>
+          <div id="value-chips" class="value-chips"></div>
+          <p id="hero-subtitle" class="subtitle"></p>
+          <div id="header-contact" class="header-contact"></div>
         </div>
       </div>
     </header>
 
+    <!-- ── Main Content ───────────────────────────────────── -->
     <main class="container">
+
+      <!-- Technical Expertise -->
       <section class="card fadeIn expandable" style="animation-delay: 0.2s;">
-        <h2><i class="fas fa-code"></i> Technical Expertise <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button></h2>
+        <h2><i class="fas fa-code"></i> Technical Expertise
+          <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button>
+        </h2>
         <div class="card-body" aria-hidden="true">
-          <div class="skills-category">
-            <h3>Automation &amp; Cloud</h3>
-            <div class="skills-grid">
-              <span class="skill-tag" title="Infrastructure as Code">Terraform (IaC)</span>
-              <span class="skill-tag" title="AWS stack orchestration">AWS CloudFormation</span>
-              <span class="skill-tag" title="Configuration automation">Ansible</span>
-              <span class="skill-tag" title="GitHub workflows &amp; Actions">GitHub Actions (CI/CD)</span>
-              <span class="skill-tag" title="Azure pipelines">Azure DevOps</span>
-              <span class="skill-tag" title="Containerization">Docker</span>
-              <span class="skill-tag" title="Container orchestration">Kubernetes</span>
-              <span class="skill-tag" title="Package manager for K8s">Helm</span>
-            </div>
-
-            <h3>Languages &amp; Data</h3>
-            <div class="skills-grid">
-              <span class="skill-tag" title="Scripting &amp; backend">Python</span>
-              <span class="skill-tag" title="Shell scripting">Bash/Shell</span>
-              <span class="skill-tag" title="Database queries">SQL</span>
-              <span class="skill-tag" title="Unified analytics platform">Databricks (Delta, SQL)</span>
-              <span class="skill-tag" title="Cloud data warehouse">Snowflake</span>
-              <span class="skill-tag" title="NoSQL database">DynamoDB</span>
-              <span class="skill-tag" title="Event streaming">Kafka</span>
-            </div>
-
-            <h3>Cloud Security</h3>
-            <div class="skills-grid">
-              <span class="skill-tag" title="Identity &amp; Access Management">IAM</span>
-              <span class="skill-tag" title="AWS Key Management Service">KMS</span>
-              <span class="skill-tag" title="Data at-rest &amp; in-transit">Data Encryption</span>
-              <span class="skill-tag" title="Private cloud endpoints">VPC Endpoints</span>
-              <span class="skill-tag" title="Designing secure systems">Security Architecture</span>
-              <span class="skill-tag" title="Healthcare data compliance">HIPAA Compliance</span>
-              <span class="skill-tag" title="Network firewalls &amp; rules">Network Security</span>
-              <span class="skill-tag" title="CloudWatch, Splunk alerts">Security Monitoring</span>
-            </div>
-          </div>
+          <div id="skills-container" class="skills-category"></div>
         </div>
       </section>
+
+      <!-- Professional Summary -->
       <section class="card fadeIn" style="animation-delay: 0.1s;">
         <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
-        <p>
-          Strategic Principal Architect with extensive experience in architecting and implementing cloud-native solutions, DataOps, and infrastructure automation across regulated and enterprise environments. Expert in designing modular Terraform frameworks, secure multicloud connectivity, and high-performance data pipelines for regulated industries, with hands-on delivery experience at Medtronic and US Foods.
-        </p>
-        <p>
-          Deep expertise in <strong>cloud security architecture</strong> (IAM, encryption, compliance frameworks like HIPAA), <strong>AI/ML platforms</strong> (Databricks, LangSmith, AWS Bedrock), and <strong>observability solutions</strong> (CloudWatch, New Relic, Splunk). Passionate about FinOps, platform engineering, and building scalable systems that balance cost, security, and performance for enterprise customers.
-        </p>
+        <div id="summary-container"></div>
       </section>
 
+      <!-- Business Impact -->
       <section id="business-impact" class="card fadeIn" style="animation-delay: 0.15s;">
         <h2><i class="fas fa-dollar-sign"></i> Business Impact</h2>
-        <p>Led continuous cloud cost-optimization and platform modernization programs that delivered measurable savings while strengthening security, governance, and observability.</p>
-          <ul class="cert-list">
-          <li><strong>AWS Cloud &amp; Data Platform FinOps</strong> — Led FinOps programs focused on AWS Cloud and data platform ecosystems (Databricks, Fivetran, Immuta, Atlan), delivering measurable savings through rightsizing, Savings Plans/Reserved Instances, automated cleanup, lifecycle policies, and governance-driven cost administration and reporting.</li>
-          <li><strong>Cross-cutting</strong> — Implemented security controls (encryption/KMS, IAM best practices, VPC endpoints), observability, and CI/CD for infrastructure and Databricks platform automation to maintain compliance and reduce MTTR.</li>
-          <li><strong>People &amp; Delivery</strong> — Mentored interns and junior engineers, established code review practices and training to raise team capability and accelerate delivery.</li>
-        </ul>
+        <p id="impact-intro"></p>
+        <ul id="impact-list" class="cert-list"></ul>
       </section>
 
+      <!-- Experience -->
       <section class="card fadeIn expandable" style="animation-delay: 0.3s;">
-        <h2><i class="fas fa-briefcase"></i> Experience <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button></h2>
+        <h2><i class="fas fa-briefcase"></i> Experience
+          <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button>
+        </h2>
         <div class="card-body" aria-hidden="true">
-          <div class="timeline">
-            <div class="timeline-item">
-              <h3>Principal Architect DataOps, Medtronic, Inc. — Duluth, Georgia</h3>
-              <span class="date">Jan 29, 2024 – Present</span>
-              <ul>
-                <li>Designed and developed Terraform modules for infrastructure provisioning, ensuring modularity, reusability, and scalability across projects &amp; environments.</li>
-                <li>Implemented CI pipelines for Terraform modules to automate testing, validation and deployment processes, ensuring reliability and consistency in infrastructure provisioning using tools such as GitHub Actions, Terraform Tests, tflint, KICS.</li>
-                <li>Designed automated Data Pipelines to move data from on-premises to AWS Cloud and Cloud-based warehouse.</li>
-                <li>Assisted in designing Modern data platform, which can be replicated for various business streams and in various regions around the world.</li>
-                <li>Worked with various internal and external vendors to ingest, transform and load data in AWS and in Snowflake in real time using Messages platform such as Kafka.</li>
-                <li>Implemented data privacy and data minimization solutions by using data encryption and decryption algorithms using Aws managed KMS key to protect sensitive information in AWS S3.</li>
-                <li>Designed and implemented secure infrastructure on AWS, leveraging services such as Amazon S3, KMS, IAM, DynamoDB, Glue, Athena, MWAA, VPC Endpoints, etc. to safeguard sensitive data and ensure compliance with HIPAA regulations.</li>
-                <li>Designed and developed the CICD pipelines to manage the Databricks resources configuration such as Network, Workspaces, Catalog, Storage, Groups, Grants, Compute, etc. using Terraform, GitHub Actions workflow.</li>
-                <li>Designed and implemented the private network connectivity between Databricks AWS Account, corporate AWS Account, Fivetran, Immuta, and Atlan.</li>
-                <li>Establish and enforce version control processes with GitHub, including branching strategies, code review, continuous integration, to maintain code quality and collaboration efficiency across the team.</li>
-                <li>Lead the Data Operations by providing technical guidance, mentorship, and support to foster collaboration, innovation, and continuous learning in a dynamic environment.</li>
-              </ul>
-            </div>
-
-            <div class="timeline-item">
-              <h3>Lead Cloud Engineer, US Foods, Inc. — Rosemont, Illinois</h3>
-              <span class="date">Feb 22, 2023 – Jan 26, 2024</span>
-              <ul>
-                <li>Defined and driven the technical roadmaps to streamline cloud infrastructure operations, cost efficiency model, security, and identified areas of efficiency.</li>
-                <li>Defined and driven technical maturity roadmaps to streamline cloud infrastructure operations, security, and efficiency.</li>
-                <li>Engaged with product managers, architects, peers and internal stakeholders to deliver compelling software releases with differentiated cloud offerings.</li>
-                <li>Provided the oversight on operations support for a large cross section of cloud services, providing consistent delivery and resolution.</li>
-                <li>Defined automation and standard build/support model across the converged systems to deliver same look, feel and experience for consumers leveraging cloud services.</li>
-                <li>Collaborated with other technology teams to define and develop cross-functional technology stack interactions.</li>
-                <li>Provided the leadership and collaboration to engage cross organizationally to promote change and carve out new technology and software.</li>
-                <li>Documented the SOPs, and MVPs.</li>
-                <li>Conducted and participated in the code reviews.</li>
-                <li>Operated as a mentor to junior members on the team.</li>
-              </ul>
-            </div>
-
-            <div class="timeline-item">
-              <h3>Lead Application Developer, US Foods, Inc. — Rosemont, Illinois</h3>
-              <span class="date">Dec 19, 2021 – Feb 21, 2023</span>
-              <ul>
-                <li>Lead the team of 6-8 developers, done the peer code reviews, and monitored the tasks progression of team using Jira.</li>
-                <li>Reviewed the project objectives and determine best technology to apply.</li>
-                <li>Designed and built large scale datasets for a wide range of consumer needs.</li>
-                <li>Designed and developed the data pipelines using bamboo, Lambda functions and Elastic MapReduce.</li>
-                <li>Designed and configured the private network connectivity between multi-cloud platforms.</li>
-                <li>Developed and implemented technical roadmaps for business-critical applications hosted on Cloud Platform.</li>
-                <li>Develop best practice standards for solution design and data structures.</li>
-                <li>Analyze new data sources to understand quality, availability and content.</li>
-                <li>Written the technical design documentation.</li>
-                <li>Created and executed the unit tests.</li>
-                <li>Provided the required support to QA team during testing.</li>
-                <li>Mentored less experienced members of the development team.</li>
-              </ul>
-            </div>
-
-            <div class="timeline-item">
-              <h3>Sr. Application Developer, US Foods, Inc. — Tempe, Arizona</h3>
-              <span class="date">Dec 26, 2018 – Dec 18, 2021</span>
-              <ul>
-                <li>Developed and Implemented automation &amp; lifecycle management of various services in AWS using bamboo pipelines and CloudFormation templates.</li>
-                <li>Designed and created the physical/logical diagrams in Lucidchart for various business applications hosted in Public Cloud.</li>
-                <li>Defined the migration strategy and implemented the Code Artifact to centralize and manage python, java internal/external dependencies.</li>
-                <li>Worked with minimal supervision and provided the status updates and escalations to leadership as appropriate.</li>
-                <li>Developed detailed system requirement specifications and technical design documents for small, medium and large business functions.</li>
-                <li>Developed high quality code and configurations for new applications, databases, interface programs and write Unit Test cases to verify correctness of functionality.</li>
-                <li>Conducted and participated in code reviews as part of oversight into team delivery.</li>
-                <li>Documented the code, FAQs, system functionality, setup documents and support resolution processes.</li>
-                <li>Developed, coordinated and released targeted application bug fixes.</li>
-                <li>Provided application support as part of an on-call rotation to work on resolving outages and user questions.</li>
-              </ul>
-            </div>
-
-            <div class="timeline-item">
-              <h3>AWS Developer, Molina Technologies LLC, Rosemont, Illinois (Client: US Foods, Inc.)</h3>
-              <span class="date">Sep 25, 2017 – Dec 25, 2018</span>
-              <ul>
-                <li>Designed and implemented centralized monitoring in enterprise cloud integrating with observability tools such as Splunk.</li>
-                <li>Developed chef cookbooks for configuration management and automated provisioning using CICD tools such as Jenkins and Terraform.</li>
-                <li>Involved in Planning, Design, Development and Testing of various Business Applications and automation of Infrastructure on Cloud platforms.</li>
-                <li>Designed AWS patterns and NoSQL database solutions, and maintained Python scripts for serverless applications.</li>
-                <li>Configured Red Hat Cluster Nodes and developed Cron scripts for operations and monitoring.</li>
-                <li>Utilized GitHub, Jenkins, Confluence, Chef, JIRA, REST API, Bash/Shell, Python, Java, JavaScript, SQL, Linux/Windows.</li>
-              </ul>
-            </div>
-          </div>
+          <div id="experience-container" class="timeline"></div>
         </div>
       </section>
 
-      <!-- Certifications moved below Education -->
-
-      <!-- Professional links moved into the header under the profile image -->
-
+      <!-- Education -->
       <section class="card fadeIn" style="animation-delay: 0.4s;">
         <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="edu-item">
-          <strong>Executive MBA (Information Technology)</strong>
-          <p>Ottawa University, Surprise, AZ — 06/26/2020 to 07/31/2022</p>
-        </div>
-        <div class="edu-item">
-          <strong>Masters in Computer Science</strong>
-          <p>Central Michigan University, Mt. Pleasant, MI — 08/31/2015 to 05/06/2017</p>
-        </div>
-        <div class="edu-item">
-          <strong>Bachelor of Technology (Computer Science &amp; Engineering)</strong>
-          <p>Brindavan Institute of Technology &amp; Science, JNTUA - AP, India — 10/04/2010 to 08/13/2014</p>
-        </div>
+        <div id="education-container"></div>
       </section>
 
+      <!-- Certifications -->
       <section class="card fadeIn expandable" style="animation-delay: 0.5s;">
-        <h2><i class="fas fa-certificate"></i> Certifications <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button></h2>
+        <h2><i class="fas fa-certificate"></i> Certifications
+          <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button>
+        </h2>
         <div class="card-body" aria-hidden="true">
-          <ul class="cert-list">
-            <li><a href="https://credentials.databricks.com/e617b598-9e67-435a-bbcb-36f54492c331#acc.RnFv4JUX" target="_blank" rel="noopener">AWS Databricks Platform Architect</a></li>
-            <li><a href="https://credentials.databricks.com/2161d7d0-bd58-445d-98a8-a9a274d9b8cd#acc.EogCIlan" target="_blank" rel="noopener">Generative AI Fundamentals</a></li>
-            <li><a href="https://bcert.me/sfafhllox" target="_blank" rel="noopener">Certified Scrum Product Owner</a></li>
-            <li><a href="https://coursera.org/share/4edf73496402479777978985126bf2a1" target="_blank" rel="noopener">Getting Started with AWS Machine Learning</a></li>
-            <li><a href="https://www.youracclaim.com/badges/9ae8e1b7-51c2-4592-be47-9de4bdb5baa5/public_url" target="_blank" rel="noopener">AWS Developer Associate</a></li>
-          </ul>
+          <ul id="cert-container" class="cert-list"></ul>
         </div>
       </section>
 
-    <script>
-      // No clipboard or reveal functionality for contact info (privacy preserved)
+    </main>
 
-      // Reveal on scroll and setup toggles with enhanced animations
-      document.addEventListener('DOMContentLoaded', function(){
+    <!-- ── Config + Renderer ──────────────────────────────── -->
+    <script src="config.js"></script>
+    <script>
+      (function render(c) {
+
+        // ── Head meta ──
+        document.getElementById('page-title').textContent = c.name + ' | ' + c.title;
+        document.getElementById('meta-desc').content = c.name + ' — ' + c.title + ' portfolio';
+
+        // ── Hero ──
+        document.getElementById('profile-img').src = c.profileImage;
+        document.getElementById('hero-title').textContent = c.title;
+        document.getElementById('hero-name').textContent = c.name;
+        document.getElementById('hero-subtitle').textContent = c.subtitle;
+
+        // Social links
+        const socialEl = document.getElementById('social-links');
+        c.social.forEach(s => {
+          socialEl.innerHTML += `
+            <a href="${s.url}" target="_blank" class="social-btn">
+              <i class="${s.icon}"></i>
+              <span class="sr-only">${s.label}</span>
+            </a>`;
+        });
+
+        // Value chips
+        const chipsEl = document.getElementById('value-chips');
+        c.valueChips.forEach(chip => {
+          chipsEl.innerHTML += `<a class="value-chip" href="#business-impact">${chip}</a>`;
+        });
+
+        // Contact
+        const contactEl = document.getElementById('header-contact');
+        contactEl.innerHTML = `
+          <span class="contact-chip"><i class="fas fa-envelope"></i><span>${c.contact.email}</span></span>
+          <span class="contact-chip"><i class="fas fa-phone"></i><span>${c.contact.phone}</span></span>
+          <span class="chip"><i class="fas fa-map-marker-alt"></i> ${c.contact.location}</span>`;
+
+        // ── Summary ──
+        const summaryEl = document.getElementById('summary-container');
+        c.summary.forEach(para => {
+          summaryEl.innerHTML += `<p>${para}</p>`;
+        });
+
+        // ── Business Impact ──
+        document.getElementById('impact-intro').textContent = c.businessImpact.intro;
+        const impactList = document.getElementById('impact-list');
+        c.businessImpact.items.forEach(item => {
+          impactList.innerHTML += `<li><strong>${item.title}</strong> — ${item.text}</li>`;
+        });
+
+        // ── Skills ──
+        const skillsEl = document.getElementById('skills-container');
+        c.skills.forEach(group => {
+          const tags = group.items.map(t =>
+            `<span class="skill-tag" title="${t.tooltip}">${t.name}</span>`
+          ).join('');
+          skillsEl.innerHTML += `
+            <h3>${group.category}</h3>
+            <div class="skills-grid">${tags}</div>`;
+        });
+
+        // ── Experience ──
+        const expEl = document.getElementById('experience-container');
+        c.experience.forEach(job => {
+          const bullets = job.bullets.map(b => `<li>${b}</li>`).join('');
+          expEl.innerHTML += `
+            <div class="timeline-item">
+              <h3>${job.role}, ${job.company} — ${job.location}</h3>
+              <span class="date">${job.dates}</span>
+              <ul>${bullets}</ul>
+            </div>`;
+        });
+
+        // ── Education ──
+        const eduEl = document.getElementById('education-container');
+        c.education.forEach(e => {
+          eduEl.innerHTML += `
+            <div class="edu-item">
+              <strong>${e.degree}</strong>
+              <p>${e.institution}, ${e.location} — ${e.dates}</p>
+            </div>`;
+        });
+
+        // ── Certifications ──
+        const certEl = document.getElementById('cert-container');
+        c.certifications.forEach(cert => {
+          certEl.innerHTML += `
+            <li><a href="${cert.url}" target="_blank" rel="noopener">${cert.name}</a></li>`;
+        });
+
+        // ── Interactivity ──
         const obs = new IntersectionObserver(entries => {
-          entries.forEach(e => { 
+          entries.forEach(e => {
             if (e.isIntersecting) {
               e.target.classList.add('visible');
               e.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
             }
           });
-        }, {threshold: 0.12});
-        document.querySelectorAll('.card').forEach(el => { obs.observe(el); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.card').forEach(el => obs.observe(el));
 
-        // Add smooth scroll behavior for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           });
         });
 
-        // Tooltip on skill tags (hover effect)
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-          tag.style.cursor = 'help';
-        });
-
-        // Expose toggle behavior for expandable cards
-        window.toggleCard = function(btn){
+        window.toggleCard = function (btn) {
           const card = btn.closest('.expandable');
           const expanded = btn.getAttribute('aria-expanded') === 'true';
           btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
           btn.textContent = expanded ? 'Show' : 'Hide';
           card.classList.toggle('expanded');
           const body = card.querySelector('.card-body');
-          if(body) body.setAttribute('aria-hidden', expanded ? 'true' : 'false');
+          if (body) body.setAttribute('aria-hidden', expanded ? 'true' : 'false');
         };
-      });
+
+      })(PORTFOLIO_CONFIG);
     </script>
   </body>
 </html>

@@ -127,7 +127,7 @@ body {
   color: var(--accent);
   font-weight: 600;
   letter-spacing: 0.1em;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }

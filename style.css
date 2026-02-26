@@ -404,14 +404,11 @@ footer {
   .connect-links { flex-direction: column; }
 }
 
-/* expandable card body */
+/* expandable card body — height driven by JS for any content length */
 .card-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 380ms cubic-bezier(.2,.9,.3,1);
-}
-.expandable.expanded .card-body {
-  max-height: 2000px;
+  transition: max-height 500ms cubic-bezier(.2,.9,.3,1);
 }
 
 .toggle-btn {

@@ -194,12 +194,15 @@
 
         window.toggleCard = function (btn) {
           const card = btn.closest('.expandable');
+          const body = card.querySelector('.card-body');
           const expanded = btn.getAttribute('aria-expanded') === 'true';
           btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
           btn.textContent = expanded ? 'Show' : 'Hide';
-          card.classList.toggle('expanded');
-          const body = card.querySelector('.card-body');
-          if (body) body.setAttribute('aria-hidden', expanded ? 'true' : 'false');
+          if (body) {
+            // animate to exact content height — works for any length
+            body.style.maxHeight = expanded ? '0' : body.scrollHeight + 'px';
+            body.setAttribute('aria-hidden', expanded ? 'true' : 'false');
+          }
         };
 
       })(PORTFOLIO_CONFIG);

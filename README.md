@@ -7,7 +7,7 @@ Personal portfolio website source.
 Start a simple static server and open http://localhost:8000:
 
 ```bash
-cd REDACTED_LOCAL_PATH
+# from the repository root, start a static server and open http://localhost:8000
 python3 -m http.server 8000
 # then open http://localhost:8000 in your browser
 ```

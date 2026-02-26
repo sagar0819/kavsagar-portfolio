@@ -615,6 +615,9 @@ footer {
     list-style-type: disc !important;
     list-style-position: inside;
     color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    -webkit-text-fill-color: #000 !important;
   }
   
   #cert-container li { 
@@ -624,6 +627,9 @@ footer {
     page-break-inside: avoid !important;
     list-style-type: disc !important;
     color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    -webkit-text-fill-color: #000 !important;
   }
   
   #cert-container li::before {
@@ -633,6 +639,9 @@ footer {
   #cert-container a { 
     color: #000 !important;
     text-decoration: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    -webkit-text-fill-color: #000 !important;
   }
   
   .cert-list { 
@@ -641,6 +650,9 @@ footer {
     padding-left: 1.2rem !important; 
     list-style-type: disc !important;
     color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    -webkit-text-fill-color: #000 !important;
   }
   
   .cert-list li { 
@@ -649,6 +661,9 @@ footer {
     font-size: 10pt !important; 
     page-break-inside: avoid !important;
     color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    -webkit-text-fill-color: #000 !important;
   }
   
   .cert-list a { 

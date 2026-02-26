@@ -488,38 +488,179 @@ footer {
 .toggle-btn[aria-expanded="true"] { background: rgba(56,189,248,0.08); }
 /* ── Print / PDF Export ──────────────────────────────────── */
 @media print {
-  * { margin: 0; padding: 0; }
-  body { background: white; color: #000; font-size: 11pt; line-height: 1.4; }
-  .hero { padding: 1rem 0; background: none; }
-  .hero-grid { grid-template-columns: 1fr; gap: 12px; }
-  .profile-card { display: none; }
-  .value-chips { display: none; }
-  .profile-links { display: none; }
-  .subtitle { display: none; }
-  .header-contact { font-size: 9pt; gap: 10px; }
-  .contact-chip, .chip { border: none; background: none; padding: 0; }
-  .card { page-break-inside: avoid; border: 1px solid #ccc; box-shadow: none; margin: 0.5rem 0; padding: 1rem; }
-  .card h2 { font-size: 13pt; margin: 0.5rem 0; color: #000; }
-  .card h2 i { display: none; }
-  .toggle-btn { display: none; }
-  .card-body { max-height: none !important; overflow: visible; }
-  .expandable { margin: 0.5rem 0; }
-  .timeline { gap: 0.8rem; }
-  .timeline-item { padding-left: 0; border: none; page-break-inside: avoid; }
-  .timeline-item::before { display: none; }
-  .timeline-item h3 { font-size: 11pt; margin: 0.3rem 0; font-weight: bold; }
-  .timeline-item .date { font-size: 10pt; color: #666; }
-  .timeline-item ul { margin: 0.4rem 0 0 1.2rem; padding: 0; }
-  .timeline-item li { margin: 0.2rem 0; font-size: 10pt; }
-  .edu-item { page-break-inside: avoid; margin: 0.3rem 0; }
-  .edu-item strong { display: block; font-size: 11pt; }
-  .edu-item p { font-size: 10pt; margin: 0.2rem 0; }
-  .cert-list { margin: 0.5rem 0; padding-left: 1.2rem; }
-  .cert-list li { margin: 0.2rem 0; font-size: 10pt; }
-  .cert-list a { color: #000; text-decoration: none; }
-  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.4rem 0; }
-  .skill-tag { background: none; border: 1px solid #999; padding: 2px 6px; font-size: 9pt; color: #000; }
-  .skills-category h3 { font-size: 11pt; margin: 0.4rem 0 0.2rem; }
-  a { color: #000; text-decoration: underline; }
+  * { margin: 0; padding: 0; box-shadow: none; }
+  
+  /* Page Setup */
   @page { margin: 0.5in; size: letter; }
+  html, body { background: white; color: #000; font-size: 11pt; line-height: 1.4; }
+  
+  /* Hero / Header */
+  .hero { padding: 1rem 0; background: none; border-bottom: 2px solid #000; margin-bottom: 0.8rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 12px; }
+  .profile-img, .profile-card, .profile-links { display: none; }
+  .value-chips, .subtitle { display: none; }
+  .hero-content { grid-column: 1; }
+  .hero-title { font-size: 10pt; color: #666; margin: 0; }
+  .hero-name { font-size: 18pt; font-weight: bold; margin: 0 0 0.3rem 0; }
+  .hero-subtitle { display: none; }
+  #social-links { display: none; }
+  
+  /* Contact Info */
+  #header-contact { display: flex; gap: 15px; font-size: 9pt; margin: 0.4rem 0 0 0; flex-wrap: wrap; }
+  .contact-chip, .chip { border: none; background: none; padding: 0; display: inline; }
+  .contact-chip span, .chip { margin-right: 3px; }
+  .contact-chip i, .chip i { display: none; }
+  
+  /* Sections */
+  .section, .card { 
+    page-break-inside: avoid; 
+    border: none; 
+    border-top: 1px solid #ccc;
+    box-shadow: none; 
+    margin: 0.8rem 0; 
+    padding: 0.8rem 0;
+    background: none;
+  }
+  
+  .card { border: none; border-top: 1px solid #ccc; }
+  .section:first-of-type { border-top: none; margin-top: 0; }
+  
+  /* Headings */
+  h2, .section h2 { 
+    font-size: 13pt; 
+    font-weight: bold; 
+    margin: 0.5rem 0 0.4rem 0; 
+    color: #000;
+    border-bottom: 1px solid #999;
+    padding-bottom: 0.3rem;
+  }
+  
+  .card h2 { border: none; padding: 0; margin: 0.5rem 0 0.3rem 0; }
+  .card h2 i { display: none; }
+  
+  /* Hide Interactive Elements */
+  .toggle-btn, .expandable .toggle-btn { display: none; }
+  #skill-filters, .filter-btn { display: none; }
+  .card-body { max-height: none !important; overflow: visible; visibility: visible; }
+  
+  /* Timeline / Experience */
+  .timeline { gap: 0; margin: 0; padding: 0; }
+  .timeline-item { 
+    padding-left: 0; 
+    border: none; 
+    border-left: none;
+    page-break-inside: avoid; 
+    margin: 0.4rem 0;
+    padding: 0;
+  }
+  
+  .timeline-item::before { display: none; }
+  .timeline-item h3 { 
+    font-size: 11pt; 
+    font-weight: bold; 
+    margin: 0.4rem 0 0.2rem 0; 
+    color: #000;
+  }
+  
+  .timeline-item .date { 
+    font-size: 10pt; 
+    color: #666; 
+    display: block;
+    margin: 0.1rem 0 0.2rem 0;
+  }
+  
+  .timeline-item ul { 
+    margin: 0.3rem 0 0 1.2rem; 
+    padding: 0; 
+    list-style-type: disc;
+  }
+  
+  .timeline-item li { 
+    margin: 0.2rem 0; 
+    font-size: 10pt; 
+    page-break-inside: avoid;
+  }
+  
+  /* Education */
+  .edu-item { 
+    page-break-inside: avoid; 
+    margin: 0.4rem 0; 
+    padding: 0;
+  }
+  
+  .edu-item strong { 
+    display: block; 
+    font-size: 11pt; 
+    font-weight: bold;
+    margin: 0.3rem 0 0.1rem 0;
+  }
+  
+  .edu-item p { 
+    font-size: 10pt; 
+    margin: 0.1rem 0; 
+    color: #333;
+  }
+  
+  /* Certifications */
+  #cert-container, .cert-list { 
+    margin: 0.4rem 0; 
+    padding-left: 1.2rem; 
+    list-style-type: disc;
+  }
+  
+  .cert-list li { 
+    margin: 0.2rem 0; 
+    font-size: 10pt; 
+    page-break-inside: avoid;
+  }
+  
+  .cert-list a, #cert-container a { 
+    color: #000; 
+    text-decoration: none; 
+  }
+  
+  /* Skills */
+  .skills-category { margin: 0.4rem 0; }
+  .skills-category h3 { 
+    font-size: 11pt; 
+    font-weight: bold;
+    margin: 0.4rem 0 0.2rem 0;
+    border: none;
+  }
+  
+  .skills-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 4px; 
+    margin: 0.3rem 0; 
+  }
+  
+  .skill-tag { 
+    background: none; 
+    border: 1px solid #999; 
+    padding: 2px 6px; 
+    font-size: 9pt; 
+    color: #000;
+    display: inline-block;
+  }
+  
+  /* Summary / Paragraph Text */
+  p { 
+    margin: 0.3rem 0; 
+    font-size: 10pt; 
+    line-height: 1.4;
+  }
+  
+  .fadeIn { animation: none; }
+  
+  /* Links */
+  a { 
+    color: #000; 
+    text-decoration: none; 
+  }
+  
+  a[href]::after { content: ""; }
+  
+  /* Container */
+  .container { width: 100%; max-width: 100%; }
 }

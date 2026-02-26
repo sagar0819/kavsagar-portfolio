@@ -37,7 +37,7 @@ const PORTFOLIO_CONFIG = {
 
   /* ── Professional Summary (HTML strings) ─────────────── */
   summary: [
-    `<strong>Accomplished Cloud Architect</strong> designing enterprise-grade cloud solutions that balance innovation, security, and cost. Architected and delivered cloud-native platforms, secure multicloud infrastructure, data pipelines, and AIOps  for Fortune 500 companies (Medtronic, US Foods) across regulated industries.`,
+    `<strong>Accomplished Cloud Architect</strong> designing enterprise-grade cloud solutions that balance innovation, security, and cost. Architected and delivered cloud-native platforms, secure multicloud infrastructure, data pipelines, and AIOps  for Fortune 500 companies across regulated industries.`,
     `Deep expertise across <strong>cloud security</strong> (IAM, HIPAA compliance, encryption), <strong>AI/ML platforms</strong> (Databricks, AWS Bedrock, LangSmith), <strong>infrastructure automation</strong> (Terraform frameworks), and <strong>observability</strong> (CloudWatch, Splunk). Passionate about platform engineering and FinOps — building systems that scale securely and sustainably.`,
   ],
 

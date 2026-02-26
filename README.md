@@ -22,6 +22,9 @@ Personal portfolio website
 - **Smooth Interactions**: Scroll animations, expandable sections, hover tooltips
 - **Privacy-First**: Contact info masked, local assets only
 - **GitHub Pages Ready**: Auto-deploys on push to `main`
+- **SEO Optimized**: JSON-LD structured data + OG meta tags for social sharing
+- **Skill Filtering**: Category-based filters for technical expertise
+- **Analytics**: Umami tracking (privacy-focused, GDPR compliant)
 
 ## Local Preview
 
@@ -80,6 +83,10 @@ Edit `style.css` to change colors, fonts, or layout. Key CSS variables in `:root
 --text-primary: #f3f4f6; /* Main text */
 --accent: #38bdf8;       /* Highlight color (cyan) */
 ```
+
+### Analytics
+
+Umami analytics is configured in `index.html`. Update the `data-website-id` if needed. No configuration required to start tracking.
 
 
 ## License & Reuse

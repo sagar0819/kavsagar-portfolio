@@ -541,7 +541,13 @@ footer {
   /* Hide Interactive Elements */
   .toggle-btn, .expandable .toggle-btn { display: none; }
   #skill-filters, .filter-btn { display: none; }
-  .card-body { max-height: none !important; overflow: visible; visibility: visible; }
+  .card-body { 
+    max-height: none !important; 
+    overflow: visible !important; 
+    visibility: visible !important;
+    display: block !important;
+    aria-hidden: false;
+  }
   
   /* Timeline / Experience */
   .timeline { gap: 0; margin: 0; padding: 0; }

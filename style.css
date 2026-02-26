@@ -139,6 +139,33 @@ body {
 /* footer */
 footer { border-top: 1px solid #1f2937; color: var(--muted); padding: 2.5rem 0; text-align:center; }
 
+/* toast */
+#toast {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 32px;
+  background: rgba(17,24,39,0.95);
+  color: #e6f7ff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 26px rgba(2,6,23,0.6);
+  opacity: 0;
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+  font-weight: 600;
+}
+#content a, .card a, .cert-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card a:hover, .cert-list a:hover {
+  text-decoration: underline;
+  color: #9beefd;
+}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(-6px); }
+
 /* Card Styling */
 .card {
   background: var(--card-bg);

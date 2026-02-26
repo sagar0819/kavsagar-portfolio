@@ -11,7 +11,7 @@ const PORTFOLIO_CONFIG = {
   name:        "Ananda Vidya Sagar Katakam",
   title:       "Principal Architect - DataOps",
   profileImage: "images/profile.jpg",   // path relative to index.html
-  subtitle:    "Designing and implementing scalable infrastructure, automated data pipelines, secure cloud (AWS & Azure), and AI platforms (LangSmith, AI Gateway, AWS Bedrock). Currently leading DataOps & AIOps at Medtronic.",
+  subtitle:    "Seasoned Cloud Architect designing enterprise-grade solutions for Fortune 500 companies across AWS, Azure, and Data/AI platforms.",
 
   /* ── Contact (display values — keep masked for privacy) ── */
   contact: {
@@ -37,8 +37,8 @@ const PORTFOLIO_CONFIG = {
 
   /* ── Professional Summary (HTML strings) ─────────────── */
   summary: [
-    `Strategic Principal Architect with extensive experience in architecting and implementing cloud-native solutions, DataOps, and infrastructure automation across regulated and enterprise environments. Expert in designing modular Terraform frameworks, secure multicloud connectivity, and high-performance data pipelines for regulated industries, with hands-on delivery experience at Medtronic and US Foods.`,
-    `Deep expertise in <strong>cloud security architecture</strong> (IAM, encryption, compliance frameworks like HIPAA), <strong>AI/ML platforms</strong> (Databricks, LangSmith, AWS Bedrock), and <strong>observability solutions</strong> (CloudWatch, New Relic, Splunk). Passionate about FinOps, platform engineering, and building scalable systems that balance cost, security, and performance for enterprise customers.`,
+    `<strong>Accomplished Cloud Architect</strong> designing enterprise-grade cloud solutions that balance innovation, security, and cost. Architected and delivered cloud-native platforms, secure multicloud infrastructure, data pipelines, and AIOps  for Fortune 500 companies (Medtronic, US Foods) across regulated industries.`,
+    `Deep expertise across <strong>cloud security</strong> (IAM, HIPAA compliance, encryption), <strong>AI/ML platforms</strong> (Databricks, AWS Bedrock, LangSmith), <strong>infrastructure automation</strong> (Terraform frameworks), and <strong>observability</strong> (CloudWatch, Splunk). Passionate about platform engineering and FinOps — building systems that scale securely and sustainably.`,
   ],
 
   /* ── Business Impact ──────────────────────────────────── */

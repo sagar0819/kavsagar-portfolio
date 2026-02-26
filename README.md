@@ -1,21 +1,37 @@
-# Ananda Vidya Sagar Katakam Portfolio (GitHub Pages)
+# Ananda Vidya Sagar Katakam — Portfolio (GitHub Pages)
 
-My professional personal summary and portfolio site
+Personal portfolio website source.
 
 ## Local preview
 
-Open `index.html` directly in a browser.
+Start a simple static server and open http://localhost:8000:
+
+```bash
+cd REDACTED_LOCAL_PATH
+python3 -m http.server 8000
+# then open http://localhost:8000 in your browser
+```
+
+Alternatively, open `index.html` directly in a browser for a quick view.
 
 ## Publish with GitHub Pages
 
-1. Create an empty GitHub repository.
-2. Push this project to the repo (default branch should be `main`).
-3. In GitHub repo settings, go to **Pages**.
-4. Set **Source** to **GitHub Actions**.
-5. Push to `main` (or re-run the workflow) and your site will deploy.
+1. Create a GitHub repository and push this project to the `main` branch.
+2. Ensure the repository contains `.github/workflows/deploy-pages.yml` (already included).
+3. In GitHub repo settings → **Pages**, confirm the Pages site is enabled.
 
 ## Customize
 
-- Edit your content in `index.html`
-- Adjust styles in `style.css`
-- (Optional) Add `CNAME` for custom domain
+- Edit page content in `index.html`
+- Edit styles in `style.css`
+- (Optional) Add a `CNAME` file for a custom domain
+
+## License / Usage
+
+This repository is marked as "All rights reserved." See the `LICENSE` file for details.
+
+No external contributions or reuse are permitted without express written permission.
+
+## Contribution policy
+
+This project does not accept external contributions. If you need to discuss reuse or collaboration, contact the repository owner directly.

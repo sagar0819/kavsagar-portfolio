@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal summary blog and profile" />
+    <title>Your Name | About Me</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="tag">Personal Summary</p>
+        <h1>Your Name</h1>
+        <p class="subtitle">Builder • Engineer • Lifelong Learner</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>About Me</h2>
+        <p>
+          I’m passionate about building reliable systems and useful products.
+          This page is a quick snapshot of who I am, what I’ve worked on, and
+          what I’m exploring next.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience Highlights</h2>
+        <ul>
+          <li>Designed and deployed cloud-native applications.</li>
+          <li>Worked with infrastructure automation and CI/CD pipelines.</li>
+          <li>Built backend services and modern web interfaces.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Current Focus</h2>
+        <p>
+          I’m currently focused on scalable architecture, developer productivity,
+          and practical AI-powered workflows.
+        </p>
+      </section>
+
+      <section>
+        <h2>Connect</h2>
+        <div class="connect-links">
+          <a href="https://github.com/sagar0819" target="_blank">GitHub</a> •
+          <a href="https://www.linkedin.com/in/kavs-66a6a037/" target="_blank">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Your Name</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

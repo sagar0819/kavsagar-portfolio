@@ -285,6 +285,38 @@ h2 {
   margin-top: 0;
 }
 
+/* Skill Filters */
+#skill-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.filter-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -300,7 +332,6 @@ h2 {
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  cursor: help;
   position: relative;
 }
 
@@ -309,6 +340,39 @@ h2 {
   border-color: rgba(56, 189, 248, 0.5);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+}
+
+/* Skill Filters */
+.skill-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-btn {
+  padding: 6px 12px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: transparent;
+  color: var(--accent);
+  border-radius: 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.filter-btn.active {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.2);
 }
 
 /* Timeline */
@@ -422,3 +486,40 @@ footer {
 }
 
 .toggle-btn[aria-expanded="true"] { background: rgba(56,189,248,0.08); }
+/* ── Print / PDF Export ──────────────────────────────────── */
+@media print {
+  * { margin: 0; padding: 0; }
+  body { background: white; color: #000; font-size: 11pt; line-height: 1.4; }
+  .hero { padding: 1rem 0; background: none; }
+  .hero-grid { grid-template-columns: 1fr; gap: 12px; }
+  .profile-card { display: none; }
+  .value-chips { display: none; }
+  .profile-links { display: none; }
+  .subtitle { display: none; }
+  .header-contact { font-size: 9pt; gap: 10px; }
+  .contact-chip, .chip { border: none; background: none; padding: 0; }
+  .card { page-break-inside: avoid; border: 1px solid #ccc; box-shadow: none; margin: 0.5rem 0; padding: 1rem; }
+  .card h2 { font-size: 13pt; margin: 0.5rem 0; color: #000; }
+  .card h2 i { display: none; }
+  .toggle-btn { display: none; }
+  .card-body { max-height: none !important; overflow: visible; }
+  .expandable { margin: 0.5rem 0; }
+  .timeline { gap: 0.8rem; }
+  .timeline-item { padding-left: 0; border: none; page-break-inside: avoid; }
+  .timeline-item::before { display: none; }
+  .timeline-item h3 { font-size: 11pt; margin: 0.3rem 0; font-weight: bold; }
+  .timeline-item .date { font-size: 10pt; color: #666; }
+  .timeline-item ul { margin: 0.4rem 0 0 1.2rem; padding: 0; }
+  .timeline-item li { margin: 0.2rem 0; font-size: 10pt; }
+  .edu-item { page-break-inside: avoid; margin: 0.3rem 0; }
+  .edu-item strong { display: block; font-size: 11pt; }
+  .edu-item p { font-size: 10pt; margin: 0.2rem 0; }
+  .cert-list { margin: 0.5rem 0; padding-left: 1.2rem; }
+  .cert-list li { margin: 0.2rem 0; font-size: 10pt; }
+  .cert-list a { color: #000; text-decoration: none; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.4rem 0; }
+  .skill-tag { background: none; border: 1px solid #999; padding: 2px 6px; font-size: 9pt; color: #000; }
+  .skills-category h3 { font-size: 11pt; margin: 0.4rem 0 0.2rem; }
+  a { color: #000; text-decoration: underline; }
+  @page { margin: 0.5in; size: letter; }
+}

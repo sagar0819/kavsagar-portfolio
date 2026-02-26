@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ananda Vidya Sagar Katakam — Resume</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .resume-container { max-width:900px; margin:40px auto; background:transparent; padding:24px; }
+      .resume-header { display:flex; gap:16px; align-items:center; }
+      .resume-header h1 { margin:0; font-size:1.6rem; }
+      .muted { color: #9ca3af }
+      .download-row { margin-top:12px; display:flex; gap:10px; }
+      .resume-section { margin-top:18px; }
+      pre { white-space: pre-wrap; font-family:inherit }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container">
+      <div class="resume-header">
+        <img src="images/profile.jpg" alt="profile" style="width:96px;height:96px;border-radius:12px;object-fit:cover"/>
+        <div>
+          <h1>Ananda Vidya Sagar Katakam</h1>
+          <div class="muted">Principal Architect - DataOps • Duluth, GA</div>
+          <div class="download-row">
+            <button onclick="window.print()" class="social-btn"><i class="fas fa-file-pdf"></i> Print / Save as PDF</button>
+            <a class="social-btn" href="resume.pdf" download>Download PDF (if present)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h3>Contact</h3>
+        <div class="muted">Email: anandavidyasagar.katakam@medtronic.com • Phone: +1 (989) 330-9099</div>
+      </div>
+
+      <div class="resume-section">
+        <h3>Professional Summary</h3>
+        <p>Strategic Principal Architect with extensive experience in architecting cloud-native solutions, DataOps, and infrastructure automation. Expert in designing modular Terraform frameworks, secure multicloud connectivity, and high-performance data pipelines for regulated industries.</p>
+      </div>
+
+      <div class="resume-section">
+        <h3>Experience</h3>
+        <pre>
+Principal Architect DataOps, Medtronic, Inc. — Duluth, Georgia | Jan 29, 2024 – Present
+- Designed and developed Terraform modules for infrastructure provisioning, ensuring modularity, reusability, and scalability across projects & environments.
+- Implemented CI pipelines for Terraform modules to automate testing, validation and deployment processes, ensuring reliability and consistency in infrastructure provisioning using tools such as GitHub Actions, Terraform Tests, tflint, KICS.
+- Designed automated Data Pipelines to move data from on-premises to AWS Cloud and Cloud-based warehouse.
+- Assisted in designing Modern data platform, which can be replicated for various business streams and in various regions around the world.
+- Worked with various internal and external vendors to ingest, transform and load data in AWS and in Snowflake in real time using Messages platform such as Kafka.
+- Implemented data privacy and data minimization solutions by using data encryption and decryption algorithms using Aws managed KMS key to protect sensitive information in AWS S3.
+- Designed and implemented secure infrastructure on AWS, leveraging services such as Amazon S3, KMS, IAM, DynamoDB, Glue, Athena, MWAA, VPC Endpoints, etc. to safeguard sensitive data and ensure compliance with HIPAA regulations.
+- Designed and developed the CICD pipelines to manage the Databricks resources configuration such as Network, Workspaces, Catalog, Storage, Groups, Grants, Compute, etc. using Terraform, GitHub Actions workflow.
+- Designed and implemented the private network connectivity between Databricks AWS Account, corporate AWS Account, Fivetran, Immuta, and Atlan.
+- Establish and enforce version control processes with GitHub, including branching strategies, code review, continuous integration, to maintain code quality and collaboration efficiency across the team.
+- Lead the Data Operations by providing technical guidance, mentorship, and support to foster collaboration, innovation, and continuous learning in a dynamic environment.
+
+Lead Cloud Engineer, US Foods, Inc. — Rosemont, Illinois | Feb 22, 2023 – Jan 26, 2024
+- Defined and driven the technical roadmaps to streamline cloud infrastructure operations, cost efficiency model, security, and identified areas of efficiency.
+- Defined and driven technical maturity roadmaps to streamline cloud infrastructure operations, security, and efficiency.
+- Engaged with product managers, architects, peers and internal stakeholders to deliver compelling software releases with differentiated cloud offerings.
+- Provided the oversight on operations support for a large cross section of cloud services, providing consistent delivery and resolution.
+- Defined automation and standard build/support model across the converged systems to deliver same look, feel and experience for consumers leveraging cloud services.
+- Collaborated with other technology teams to define and develop cross-functional technology stack interactions.
+- Provided the leadership and collaboration to engage cross organizationally to promote change and carve out new technology and software.
+- Documented the SOPs, and MVPs.
+- Conducted and participated in the code reviews.
+- Operated as a mentor to junior members on the team.
+
+... (Full resume continues in this document)
+        </pre>
+      </div>
+
+      <div class="resume-section">
+        <h3>Certifications</h3>
+        <ul>
+          <li><a href="https://credentials.databricks.com/e617b598-9e67-435a-bbcb-36f54492c331#acc.RnFv4JUX" target="_blank" rel="noopener">AWS Databricks Platform Architect</a></li>
+          <li><a href="https://credentials.databricks.com/2161d7d0-bd58-445d-98a8-a9a274d9b8cd#acc.EogCIlan" target="_blank" rel="noopener">Generative AI Fundamentals</a></li>
+          <li><a href="https://bcert.me/sfafhllox" target="_blank" rel="noopener">Certified Scrum Product Owner</a></li>
+          <li><a href="https://coursera.org/share/4edf73496402479777978985126bf2a1" target="_blank" rel="noopener">Getting Started with AWS Machine Learning</a></li>
+          <li><a href="https://www.youracclaim.com/badges/9ae8e1b7-51c2-4592-be47-9de4bdb5baa5/public_url" target="_blank" rel="noopener">AWS Developer Associate</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

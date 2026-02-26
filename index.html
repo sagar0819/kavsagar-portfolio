@@ -34,11 +34,45 @@
 
             <span class="chip"><i class="fas fa-map-marker-alt"></i> Duluth, GA</span>
           </div>
+          <div style="margin-top:14px;">
+            <a class="social-btn" href="/resume.html" target="_blank" rel="noopener">
+              <i class="fas fa-file-download"></i> View / Download Resume
+            </a>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="container">
+      <section class="card fadeIn expandable" style="animation-delay: 0.2s;">
+        <h2><i class="fas fa-code"></i> Technical Expertise <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button></h2>
+        <div class="card-body" aria-hidden="true">
+          <div class="skills-category">
+            <h3>Automation &amp; Cloud</h3>
+            <div class="skills-grid">
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">AWS CloudFormation</span>
+              <span class="skill-tag">Ansible</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Azure DevOps</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Helm</span>
+            </div>
+
+            <h3>Languages &amp; Data</h3>
+            <div class="skills-grid">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Bash/Shell</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Databricks</span>
+              <span class="skill-tag">Snowflake</span>
+              <span class="skill-tag">DynamoDB</span>
+              <span class="skill-tag">Kafka</span>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="card fadeIn" style="animation-delay: 0.1s;">
         <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
         <p>
@@ -47,73 +81,96 @@
         </p>
       </section>
 
-      <section class="card fadeIn" style="animation-delay: 0.2s;">
-        <h2><i class="fas fa-code"></i> Technical Expertise</h2>
-        <div class="skills-category">
-          <h3>Automation & Cloud</h3>
-          <div class="skills-grid">
-            <span class="skill-tag">Terraform</span>
-            <span class="skill-tag">AWS CloudFormation</span>
-            <span class="skill-tag">Ansible</span>
-            <span class="skill-tag">GitHub Actions</span>
-            <span class="skill-tag">Azure DevOps</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">Helm</span>
-          </div>
-          <h3>Languages & Data</h3>
-          <div class="skills-grid">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Bash/Shell</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Databricks</span>
-            <span class="skill-tag">Snowflake</span>
-            <span class="skill-tag">DynamoDB</span>
-            <span class="skill-tag">Kafka</span>
+      <section class="card fadeIn expandable" style="animation-delay: 0.3s;">
+        <h2><i class="fas fa-briefcase"></i> Experience <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button></h2>
+        <div class="card-body" aria-hidden="true">
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Principal Architect DataOps, Medtronic, Inc. — Duluth, Georgia</h3>
+              <span class="date">Jan 29, 2024 – Present</span>
+              <ul>
+                <li>Designed and developed Terraform modules for infrastructure provisioning, ensuring modularity, reusability, and scalability across projects &amp; environments.</li>
+                <li>Implemented CI pipelines for Terraform modules to automate testing, validation and deployment processes, ensuring reliability and consistency in infrastructure provisioning using tools such as GitHub Actions, Terraform Tests, tflint, KICS.</li>
+                <li>Designed automated Data Pipelines to move data from on-premises to AWS Cloud and Cloud-based warehouse.</li>
+                <li>Assisted in designing Modern data platform, which can be replicated for various business streams and in various regions around the world.</li>
+                <li>Worked with various internal and external vendors to ingest, transform and load data in AWS and in Snowflake in real time using Messages platform such as Kafka.</li>
+                <li>Implemented data privacy and data minimization solutions by using data encryption and decryption algorithms using Aws managed KMS key to protect sensitive information in AWS S3.</li>
+                <li>Designed and implemented secure infrastructure on AWS, leveraging services such as Amazon S3, KMS, IAM, DynamoDB, Glue, Athena, MWAA, VPC Endpoints, etc. to safeguard sensitive data and ensure compliance with HIPAA regulations.</li>
+                <li>Designed and developed the CICD pipelines to manage the Databricks resources configuration such as Network, Workspaces, Catalog, Storage, Groups, Grants, Compute, etc. using Terraform, GitHub Actions workflow.</li>
+                <li>Designed and implemented the private network connectivity between Databricks AWS Account, corporate AWS Account, Fivetran, Immuta, and Atlan.</li>
+                <li>Establish and enforce version control processes with GitHub, including branching strategies, code review, continuous integration, to maintain code quality and collaboration efficiency across the team.</li>
+                <li>Lead the Data Operations by providing technical guidance, mentorship, and support to foster collaboration, innovation, and continuous learning in a dynamic environment.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Lead Cloud Engineer, US Foods, Inc. — Rosemont, Illinois</h3>
+              <span class="date">Feb 22, 2023 – Jan 26, 2024</span>
+              <ul>
+                <li>Defined and driven the technical roadmaps to streamline cloud infrastructure operations, cost efficiency model, security, and identified areas of efficiency.</li>
+                <li>Defined and driven technical maturity roadmaps to streamline cloud infrastructure operations, security, and efficiency.</li>
+                <li>Engaged with product managers, architects, peers and internal stakeholders to deliver compelling software releases with differentiated cloud offerings.</li>
+                <li>Provided the oversight on operations support for a large cross section of cloud services, providing consistent delivery and resolution.</li>
+                <li>Defined automation and standard build/support model across the converged systems to deliver same look, feel and experience for consumers leveraging cloud services.</li>
+                <li>Collaborated with other technology teams to define and develop cross-functional technology stack interactions.</li>
+                <li>Provided the leadership and collaboration to engage cross organizationally to promote change and carve out new technology and software.</li>
+                <li>Documented the SOPs, and MVPs.</li>
+                <li>Conducted and participated in the code reviews.</li>
+                <li>Operated as a mentor to junior members on the team.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Lead Application Developer, US Foods, Inc. — Rosemont, Illinois</h3>
+              <span class="date">Dec 19, 2021 – Feb 21, 2023</span>
+              <ul>
+                <li>Lead the team of 6-8 developers, done the peer code reviews, and monitored the tasks progression of team using Jira.</li>
+                <li>Reviewed the project objectives and determine best technology to apply.</li>
+                <li>Designed and built large scale datasets for a wide range of consumer needs.</li>
+                <li>Designed and developed the data pipelines using bamboo, Lambda functions and Elastic MapReduce.</li>
+                <li>Designed and configured the private network connectivity between multi-cloud platforms.</li>
+                <li>Developed and implemented technical roadmaps for business-critical applications hosted on Cloud Platform.</li>
+                <li>Develop best practice standards for solution design and data structures.</li>
+                <li>Analyze new data sources to understand quality, availability and content.</li>
+                <li>Written the technical design documentation.</li>
+                <li>Created and executed the unit tests.</li>
+                <li>Provided the required support to QA team during testing.</li>
+                <li>Mentored less experienced members of the development team.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Sr. Application Developer, US Foods, Inc. — Tempe, Arizona</h3>
+              <span class="date">Dec 26, 2018 – Dec 18, 2021</span>
+              <ul>
+                <li>Developed and Implemented automation &amp; lifecycle management of various services in AWS using bamboo pipelines and CloudFormation templates.</li>
+                <li>Designed and created the physical/logical diagrams in Lucidchart for various business applications hosted in Public Cloud.</li>
+                <li>Defined the migration strategy and implemented the Code Artifact to centralize and manage python, java internal/external dependencies.</li>
+                <li>Worked with minimal supervision and provided the status updates and escalations to leadership as appropriate.</li>
+                <li>Developed detailed system requirement specifications and technical design documents for small, medium and large business functions.</li>
+                <li>Developed high quality code and configurations for new applications, databases, interface programs and write Unit Test cases to verify correctness of functionality.</li>
+                <li>Conducted and participated in code reviews as part of oversight into team delivery.</li>
+                <li>Documented the code, FAQs, system functionality, setup documents and support resolution processes.</li>
+                <li>Developed, coordinated and released targeted application bug fixes.</li>
+                <li>Provided application support as part of an on-call rotation to work on resolving outages and user questions.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h3>AWS Developer, Molina Technologies LLC, Rosemont, Illinois (Client: US Foods, Inc.)</h3>
+              <span class="date">Sep 25, 2017 – Dec 25, 2018</span>
+              <ul>
+                <li>Designed and implemented centralized monitoring in enterprise cloud integrating with observability tools such as Splunk.</li>
+                <li>Developed chef cookbooks for configuration management and automated provisioning using CICD tools such as Jenkins and Terraform.</li>
+                <li>Involved in Planning, Design, Development and Testing of various Business Applications and automation of Infrastructure on Cloud platforms.</li>
+                <li>Designed AWS patterns and NoSQL database solutions, and maintained Python scripts for serverless applications.</li>
+                <li>Configured Red Hat Cluster Nodes and developed Cron scripts for operations and monitoring.</li>
+                <li>Utilized GitHub, Jenkins, Confluence, Chef, JIRA, REST API, Bash/Shell, Python, Java, JavaScript, SQL, Linux/Windows.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-
-      <section class="card fadeIn" style="animation-delay: 0.3s;">
-        <h2><i class="fas fa-briefcase"></i> Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>Principal Architect DataOps @ Medtronic</h3>
-            <span class="date">Jan 2024 – Present</span>
-            <ul>
-              <li>Deploys modular Terraform frameworks for global infrastructure scaling.</li>
-              <li>Architected automated data pipelines from on-premises to AWS/Snowflake.</li>
-              <li>Designed secure Databricks resource configuration and private network mesh.</li>
-            </ul>
-          </div>
-          <div class="timeline-item">
-            <h3>Lead Cloud Engineer @ US Foods</h3>
-            <span class="date">Feb 2023 – Jan 2024</span>
-            <ul>
-              <li>Drove technical roadmaps for cloud efficiency, security, and maturity.</li>
-              <li>Standardized automation models across converged cloud systems.</li>
-            </ul>
-          </div>
-          <div class="timeline-item">
-            <h3>Lead Application Developer @ US Foods</h3>
-            <span class="date">Dec 2021 – Feb 2023</span>
-            <ul>
-              <li>Led development teams in building large-scale data pipelines using EMR and Lambda.</li>
-              <li>Engineered cross-platform private network connectivity.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="card fadeIn" style="animation-delay: 0.4s;">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="edu-item">
-          <strong>Executive MBA (Information Technology)</strong>
-          <p>Ottawa University, Surprise, AZ</p>
-        </div>
-        <div class="edu-item">
-          <strong>MS in Computer Science</strong>
-          <p>Central Michigan University, Mt. Pleasant, MI</p>
         </div>
         <div class="edu-item">
           <strong>Bachelor of Technology (Computer Science &amp; Engineering)</strong>
@@ -121,14 +178,17 @@
         </div>
       </section>
 
-      <section class="card fadeIn" style="animation-delay: 0.5s;">
-        <h2><i class="fas fa-certificate"></i> Certifications</h2>
-        <ul class="cert-list">
-          <li>AWS Certified Solutions Architect — (Add year)</li>
-          <li>HashiCorp Certified: Terraform Associate — (Add year)</li>
-          <li>Databricks Certified (Add specifics)</li>
-          <li>Other relevant certs (Add as needed)</li>
-        </ul>
+      <section class="card fadeIn expandable" style="animation-delay: 0.5s;">
+        <h2><i class="fas fa-certificate"></i> Certifications <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button></h2>
+        <div class="card-body" aria-hidden="true">
+          <ul class="cert-list">
+            <li><a href="https://credentials.databricks.com/e617b598-9e67-435a-bbcb-36f54492c331#acc.RnFv4JUX" target="_blank" rel="noopener">AWS Databricks Platform Architect</a></li>
+            <li><a href="https://credentials.databricks.com/2161d7d0-bd58-445d-98a8-a9a274d9b8cd#acc.EogCIlan" target="_blank" rel="noopener">Generative AI Fundamentals</a></li>
+            <li><a href="https://bcert.me/sfafhllox" target="_blank" rel="noopener">Certified Scrum Product Owner</a></li>
+            <li><a href="https://coursera.org/share/4edf73496402479777978985126bf2a1" target="_blank" rel="noopener">Getting Started with AWS Machine Learning</a></li>
+            <li><a href="https://www.youracclaim.com/badges/9ae8e1b7-51c2-4592-be47-9de4bdb5baa5/public_url" target="_blank" rel="noopener">AWS Developer Associate</a></li>
+          </ul>
+        </div>
       </section>
 
       <section class="card fadeIn" style="animation-delay: 0.6s;">
@@ -170,17 +230,18 @@
           entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, {threshold: 0.12});
         document.querySelectorAll('.card').forEach(el => { obs.observe(el); });
+
+        // Expose toggle behavior for expandable cards
+        window.toggleCard = function(btn){
+          const card = btn.closest('.expandable');
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          btn.textContent = expanded ? 'Show' : 'Hide';
+          if (!expanded) btn.prepend(document.createTextNode(''));
+          card.classList.toggle('expanded');
+          card.querySelector('.card-body').setAttribute('aria-hidden', expanded ? 'true' : 'false');
+        };
       });
-    </script>
-
-    <footer>
-      <div class="container">
-        <p>© <span id="year"></span> Your Name</p>
-      </div>
-    </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

@@ -4,9 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta id="meta-desc" name="description" content="Personal portfolio" />
+    <meta property="og:title" id="og-title" content="Portfolio" />
+    <meta property="og:description" id="og-desc" content="Professional portfolio & resume" />
+    <meta property="og:image" id="og-image" content="https://avatars.githubusercontent.com/u/172141949?v=4&s=200" />
+    <meta property="og:type" content="profile" />
+    <meta name="theme-color" content="#030712" />
+    <meta name="twitter:card" content="summary" />
     <title id="page-title">Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" id="json-ld"></script>
+    
+    <!-- Umami Analytics (Privacy-First) -->
+    <script async src="https://cloud.umami.is/script.js" data-website-id="eK4hYJwhA"></script>
   </head>
   <body>
     <!-- ██ Edit config.js to personalise — do not edit content here ██ -->
@@ -37,6 +48,7 @@
           <button class="toggle-btn" aria-expanded="false" onclick="toggleCard(this)">Show</button>
         </h2>
         <div class="card-body" aria-hidden="true">
+          <div id="skill-filters" class="skill-filters"></div>
           <div id="skills-container" class="skills-category"></div>
         </div>
       </section>
@@ -87,9 +99,32 @@
     <script>
       (function render(c) {
 
-        // ── Head meta ──
+        // ── Head meta tags ──
         document.getElementById('page-title').textContent = c.name + ' | ' + c.title;
         document.getElementById('meta-desc').content = c.name + ' — ' + c.title + ' portfolio';
+        document.getElementById('og-title').content = c.name + ' | ' + c.title;
+        document.getElementById('og-desc').content = c.subtitle.substring(0, 120) + '...';
+        
+        // Set profile image in meta for social sharing
+        const profileUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/' + c.profileImage;
+        document.getElementById('og-image').content = profileUrl;
+
+        // ── JSON-LD Structured Data (Schema.org Profile/Person) ──
+        const jsonLd = {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": c.name,
+          "url": window.location.href,
+          "image": profileUrl,
+          "jobTitle": c.title,
+          "description": c.subtitle,
+          "sameAs": c.social.map(s => s.url),
+          "worksFor": c.experience.length > 0 ? {
+            "@type": "Organization",
+            "name": c.experience[0].company
+          } : undefined
+        };
+        document.getElementById('json-ld').textContent = JSON.stringify(jsonLd);
 
         // ── Hero ──
         document.getElementById('profile-img').src = c.profileImage;
@@ -133,15 +168,26 @@
           impactList.innerHTML += `<li><strong>${item.title}</strong> — ${item.text}</li>`;
         });
 
-        // ── Skills ──
+        // ── Skills with Filtering ──
         const skillsEl = document.getElementById('skills-container');
+        const filterEl = document.getElementById('skill-filters');
+        
+        // Generate filter buttons
+        const filterBtn = (text, cat, isActive = false) => `
+          <button class="filter-btn ${isActive ? 'active' : ''}" onclick="filterSkills('${cat}')">${text}</button>`;
+        filterEl.innerHTML += filterBtn('All', 'all', true);
+        c.skills.forEach(group => {
+          filterEl.innerHTML += filterBtn(group.category, group.category);
+        });
+
+        // Render skills
         c.skills.forEach(group => {
           const tags = group.items.map(t =>
-            `<span class="skill-tag" title="${t.tooltip}">${t.name}</span>`
+            `<span class="skill-tag" data-category="${group.category}" title="${t.tooltip}">${t.name}</span>`
           ).join('');
           skillsEl.innerHTML += `
-            <h3>${group.category}</h3>
-            <div class="skills-grid">${tags}</div>`;
+            <h3 data-category="${group.category}">${group.category}</h3>
+            <div class="skills-grid" data-category="${group.category}">${tags}</div>`;
         });
 
         // ── Experience ──
@@ -203,6 +249,22 @@
             body.style.maxHeight = expanded ? '0' : body.scrollHeight + 'px';
             body.setAttribute('aria-hidden', expanded ? 'true' : 'false');
           }
+        };
+
+        // ── Skill Filter Handler ──
+        window.filterSkills = function(category) {
+          document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          event.target.classList.add('active');
+
+          document.querySelectorAll('[data-category]').forEach(el => {
+            if (category === 'all' || el.getAttribute('data-category') === category) {
+              el.style.display = '';
+            } else {
+              el.style.display = 'none';
+            }
+          });
         };
 
       })(PORTFOLIO_CONFIG);

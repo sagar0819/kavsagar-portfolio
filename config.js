@@ -106,9 +106,30 @@ const PORTFOLIO_CONFIG = {
   experience: [
     {
       role:     "Principal Architect DataOps",
+      company:  "MiniMed",
+      location: "Remote",
+      dates:    "Mar 2026 – Present",
+      bullets: [
+        "Designed and developed reusable Terraform modules for AWS and Databricks infrastructure provisioning, ensuring modularity, scalability, and environment parity across dev, staging, and production in multi-region deployments, significantly reducing time-to-provision new environments",
+        "Implemented CI/CD pipelines for Terraform and Databricks Asset Bundles using GitHub Actions, integrating reusable security-scan workflows — Bandit, Semgrep SAST (SARIF), pip-audit, SQLFluff, KICS, tflint, cfn-lint, and Trivy — enforced as a required pre-deploy gate with automated rollback, ensuring reliability and audit-readiness across all environments",
+        "Designed and implemented the Databricks AI Gateway pattern — connecting Model Serving endpoints to AWS Bedrock via Unity Catalog Service Credentials backed by least-privilege IAM roles, with PII guardrails, rate limits, and usage tracking; codified as a reusable Terraform template for environment promotion",
+        "Engineered AWS cost visibility automation using a weekly Cost Explorer and WAF CloudWatch Logs reporting pipeline; drove Bedrock inference cost optimization by auditing model quota boundaries and deferring Provisioned Throughput commitments until utilization justified the spend",
+        "Designed and implemented secure, HIPAA-compliant AWS infrastructure for GenAI applications (Conversational Chat Assist; Customer Support Agentic system) leveraging ECS Fargate, S3, DynamoDB, Aurora MySQL, OpenSearch Serverless, KMS with per-resource CMKs, Bedrock VPC Endpoints, and Bedrock Guardrails — eliminating public data paths and enabling audit-readiness across PHI/PII-adjacent workloads",
+        "Designed and developed CI/CD pipelines to manage Databricks resource configuration — Networks, Workspaces, Unity Catalog, Storage, Groups, Grants, and Compute — using Terraform and GitHub Actions, enabling a self-service Modern Data Platform replicable across multiple business units and regions",
+        "Designed and implemented private network connectivity between the Databricks AWS account, corporate AWS account, and third-party platforms (Fivetran, Immuta, Atlan), ensuring secure, auditable data flows without traversing the public internet",
+        "Designed and implemented an automated credential rotation framework using GitHub Actions with OIDC, rotating Databricks service principal PAT tokens and OAuth secrets on a scheduled basis across multi-region environments and storing credentials in AWS Secrets Manager — eliminating manual toil and reducing credential sprawl risk",
+        "Designed automated data pipelines to ingest, transform, and load data from on-premises systems into AWS and Snowflake; collaborated with internal and external vendors to enable real-time ingestion using streaming platforms such as Kafka",
+        "Implemented data privacy and minimization controls using AWS KMS-managed encryption across S3, DynamoDB, and RDS, ensuring compliance with HIPAA and internal data classification policies",
+        "Established a docs-as-code framework using MkDocs and GitHub Pages, version-controlling platform documentation alongside infrastructure code with automated publishing on release — covering developer onboarding, AWS, Databricks, and GitHub platform standards",
+        "Established and enforced version control processes using GitHub, including branching strategies, mandatory PR review gates for stage and production, and automated documentation generation, maintaining code quality and collaboration efficiency across platform and application repositories",
+        "Led Data Operations by providing technical guidance, mentorship, and architectural direction to platform and data science engineering teams, fostering a culture of continuous learning, standardization, and shared ownership",
+      ],
+    },
+    {
+      role:     "Principal Architect DataOps",
       company:  "Medtronic, Inc.",
       location: "Duluth, Georgia",
-      dates:    "Jan 2024 – Present",
+      dates:    "Jan 2024 – Mar 2026",
       bullets: [
         "Designed and developed Terraform modules for infrastructure provisioning, ensuring modularity, reusability, and scalability across projects & environments.",
         "Implemented CI pipelines for Terraform modules to automate testing, validation and deployment processes, ensuring reliability and consistency in infrastructure provisioning using tools such as GitHub Actions, Terraform Tests, tflint, KICS.",

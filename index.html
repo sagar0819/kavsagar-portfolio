@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <!-- Restore saved theme before CSS renders to avoid flash -->
+    <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}());</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta id="meta-desc" name="description" content="Personal portfolio" />
     <meta property="og:title" id="og-title" content="Portfolio" />
@@ -20,6 +22,11 @@
     <script async src="https://cloud.umami.is/script.js" data-website-id="eK4hYJwhA"></script>
   </head>
   <body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Dark mode" title="Dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+
     <!-- ██ Edit config.js to personalise — do not edit content here ██ -->
 
     <!-- ── Hero ──────────────────────────────────────────── -->
@@ -268,6 +275,39 @@
         };
 
       })(PORTFOLIO_CONFIG);
+    </script>
+
+    <!-- ── Theme Toggle ────────────────────────── -->
+    <script>
+      (function () {
+        var THEMES = ['dark', 'light', 'auto'];
+        var ICONS  = { dark: 'fa-moon', light: 'fa-sun', auto: 'fa-circle-half-stroke' };
+        var LABELS = { dark: 'Dark mode', light: 'Light mode', auto: 'Auto (system)' };
+
+        function applyTheme(t) {
+          document.documentElement.setAttribute('data-theme', t);
+          localStorage.setItem('theme', t);
+          var btn = document.getElementById('theme-toggle');
+          if (btn) {
+            btn.querySelector('i').className = 'fas ' + ICONS[t];
+            btn.setAttribute('aria-label', LABELS[t]);
+            btn.title = LABELS[t];
+          }
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) {
+            var isLight = t === 'light' || (t === 'auto' && window.matchMedia('(prefers-color-scheme: light)').matches);
+            meta.content = isLight ? '#f6f8fa' : '#0d1117';
+          }
+        }
+
+        // Sync icon with whatever theme is currently active (set by anti-FOUC or default)
+        applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+
+        document.getElementById('theme-toggle').addEventListener('click', function () {
+          var cur = document.documentElement.getAttribute('data-theme') || 'dark';
+          applyTheme(THEMES[(THEMES.indexOf(cur) + 1) % THEMES.length]);
+        });
+      }());
     </script>
   </body>
 </html>

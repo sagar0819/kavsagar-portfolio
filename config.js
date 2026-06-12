@@ -50,8 +50,8 @@ const PORTFOLIO_CONFIG = {
         text:  "Led FinOps programs focused on AWS Cloud and data platform ecosystems (Databricks, Fivetran, Immuta, Atlan), delivering measurable savings through rightsizing, Savings Plans/Reserved Instances, automated cleanup, lifecycle policies, and governance-driven cost administration and reporting.",
       },
       {
-        title: "Cross-cutting",
-        text:  "Implemented security controls (encryption/KMS, IAM best practices, VPC endpoints), observability, and CI/CD for infrastructure and Databricks platform automation to maintain compliance and reduce MTTR.",
+        title: "Compliance & Operational Excellence",
+        text:  "Implemented enterprise-grade security controls (encryption/KMS, IAM best practices, VPC endpoints), observability, and CI/CD automation across infrastructure and Databricks platforms to maintain HIPAA compliance, reduce MTTR, and enable audit-readiness.",
       },
       {
         title: "People & Delivery",
@@ -106,7 +106,7 @@ const PORTFOLIO_CONFIG = {
   experience: [
     {
       role:     "Principal Architect DataOps",
-      company:  "MiniMed",
+      company:  "Medtronic MiniMed, Inc.",
       location: "Johns Creek, Georgia",
       dates:    "Mar 2026 – Present",
       bullets: [
@@ -204,7 +204,7 @@ const PORTFOLIO_CONFIG = {
       role:     "AWS Developer",
       company:  "Molina Technologies LLC",
       client:   "US Foods, Inc.",
-      location: "Rosemont, Illinois",
+      location: "Herndon, Virginia",
       dates:    "Sep 2017 – Dec 2018",
       bullets: [
         "Designed and implemented centralized monitoring in enterprise cloud integrating with observability tools such as Splunk.",

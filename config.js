@@ -107,7 +107,7 @@ const PORTFOLIO_CONFIG = {
     {
       role:     "Sr Principal IT Architect - DataOps",
       company:  "Medtronic MiniMed, Inc.",
-      location: "Johns Creek, Georgia",
+      location: "Duluth, Georgia",
       dates:    "Jul 2026 – Present",
       bullets: [
         "Designed and developed reusable Terraform modules for AWS and Databricks infrastructure provisioning, ensuring modularity, scalability, and environment parity across dev, staging, and production in multi-region deployments, significantly reducing time-to-provision new environments",
@@ -128,7 +128,7 @@ const PORTFOLIO_CONFIG = {
     {
       role:     "Principal Architect - DataOps",
       company:  "Medtronic MiniMed, Inc.",
-      location: "Johns Creek, Georgia",
+      location: "Duluth, Georgia",
       dates:    "Mar 2026 – Jun 2026",
       bullets: [
         "Designed and developed reusable Terraform modules for AWS and Databricks infrastructure provisioning, ensuring modularity, scalability, and environment parity across dev, staging, and production in multi-region deployments, significantly reducing time-to-provision new environments",
